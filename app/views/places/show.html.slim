@@ -1,0 +1,32 @@
+.page-header
+  = link_to places_path, :class => 'btn btn-default' do 
+    span.glyphicon.glyphicon-list-alt
+    |  Back 
+  = link_to edit_place_path(@place), :class => 'btn btn-primary' do 
+    span.glyphicon.glyphicon-pencil
+    |  Edit 
+  h1
+    | Show place
+dl.dl-horizontal
+  dt
+    | Title:
+  dd
+    = @place.title
+  dt
+    | Description:
+  dd
+    = @place.description
+  dt
+    | Status:
+  dd
+    = @place.status
+  dt
+    | Location:
+  dd#location data-location-lat="#{@place.location[0]}" data-location-lng="#{@place.location[1]}"
+    = @place.location
+
+
+#map_wrapper(style="width:600px")
+  #map(style="width:600px;height:400px")
+
+

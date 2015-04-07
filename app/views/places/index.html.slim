@@ -1,0 +1,36 @@
+.page-header
+  = link_to new_place_path, :class => 'btn btn-primary' do 
+    span.glyphicon.glyphicon-plus
+    | &nbsp;
+    = t "places.add"
+  h1
+    | Listing places
+
+.table-responsive
+  table.table.table-striped.table-bordered.table-hover
+    thead
+      tr
+        th
+          | Title
+        th
+          | Description
+        th
+          | Status
+        th
+        th
+        th
+    tbody
+      - @places.each do | place |
+        tr
+          td
+            = place.title
+          td
+            = place.description
+          td
+            = place.status
+          td
+            = link_to 'Show', place
+          td
+            = link_to 'Edit', edit_place_path(place) 
+          td
+            = link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } 
