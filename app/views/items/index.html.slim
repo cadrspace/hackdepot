@@ -1,0 +1,36 @@
+.page-header
+  = link_to new_item_path, :class => 'btn btn-primary' do 
+    span.glyphicon.glyphicon-plus
+    | &nbsp;
+    = t "items.add"
+  h1
+    = t "items.listing"
+
+.table-responsive
+  table.table.table-bordered.table-hover
+    thead
+      tr
+        th Заголовок
+        th style="width:10px" 
+          | Статус
+        th style="width:140px"
+          | Дата добавления
+        th style="width:100px"
+    tbody
+      - @items.each do | item |
+        tr
+          td 
+            = link_to item.title, item
+            p style="color:gray"
+              = item.description
+          td
+            span.label.label-success.cr-label-status
+              = item.status
+          td
+            = item.created_at
+          td
+            = link_to t('details'), item
+            br 
+            = link_to t('edit'), edit_item_path(item) 
+            br
+            = link_to t('destroy'), item, method: :delete, data: { confirm: t('items.confirm') } 

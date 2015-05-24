@@ -1,0 +1,15 @@
+= simple_form_for @item, html: {multipart: true} do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :title
+    = f.input :description
+    = f.input :status, as: :select, collection: enum_option_pairs(Item, :status)
+    / = f.input :item_image, as: :file, input_html: {multiple: true} 
+    = f.input :item_images, as: :file, input_html: {:multiple => true, name: "item_images[image][]"}
+  
+
+
+
+  .form-actions
+    = f.button :submit, class: 'btn btn-success', :value => t("submit")

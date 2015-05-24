@@ -1,0 +1,8 @@
+.page-header
+  = link_to items_path, :class => 'btn btn-default' do 
+    span.glyphicon.glyphicon-list-alt
+    | &nbsp;
+    = t "back"
+  h1
+    = t "items.new"
+= render 'form'

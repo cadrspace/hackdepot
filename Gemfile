@@ -71,8 +71,10 @@ gem 'forgery'
 gem 'countries'
 gem 'country_select'
 gem 'cities', '~> 0.3.1'
-
 gem 'underscore-rails'
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem "mongoid-paperclip", :require => "mongoid_paperclip"
+
 # geo
 gem 'gmaps4rails'
 

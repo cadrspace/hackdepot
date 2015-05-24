@@ -1,0 +1,26 @@
+.row
+  .col-md-12
+    .page-header
+      = link_to items_path, :class => 'btn btn-default' do 
+        span.glyphicon.glyphicon-list-alt
+        | &nbsp;
+        = t("back")
+      = link_to edit_item_path(@item), :class => 'btn btn-primary' do 
+        span.glyphicon.glyphicon-pencil
+        | &nbsp;
+        = t("edit")
+      h1
+        = @item.title
+        | &nbsp
+        span.label.label-success.cr-label-status
+          = @item.status        
+        | &nbsp;
+        br
+        small
+          i
+            = @item.created_at
+    dl.dl-horizontal
+    p
+      = @item.description
+    - @item.item_images.each do |i|
+      = image_tag i.image.url(:thumb)
