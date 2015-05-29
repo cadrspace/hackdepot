@@ -5,6 +5,7 @@
     = f.input :title
     = f.input :description
     = f.input :status, as: :select, collection: enum_option_pairs(Item, :status)
+    = f.input :tags 
     / = f.input :item_image, as: :file, input_html: {multiple: true} 
     = f.input :item_images, as: :file, input_html: {:multiple => true, name: "item_images[image][]"}
   

@@ -55,6 +55,8 @@ gem 'acts-as-taggable-on', '~> 3.4'
 gem 'carrierwave'
 gem 'rmagick', :require => 'RMagick'
 
+gem 'mongoid_taggable'
+
 
 # Authentication and authorization
 gem 'devise'

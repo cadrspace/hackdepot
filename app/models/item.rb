@@ -1,11 +1,13 @@
 class Item
   include Mongoid::Document
+  include Mongoid::Taggable
   include Mongoid::Timestamps
   include SimpleEnum::Mongoid
 
+  tags_separator ',' 
+
   field :title, type: String
   field :description, type: String
-
   as_enum :status, free: 1, used: 2, requested: 3
 
 #  has_mongoid_attached_file :image, styles: {thumb: "100x100#"}, :default_url => "missing.png"

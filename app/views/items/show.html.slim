@@ -20,6 +20,9 @@
           i
             = @item.created_at
     dl.dl-horizontal
+    p        
+      - @item.tags_array.each do |i|
+        = link_to i, "/items/tag/" + i, :class => "label label-success"
     p
       = @item.description
     - @item.item_images.each do |i|

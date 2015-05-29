@@ -4,7 +4,9 @@ class ItemsController < ApplicationController
   respond_to :html
 
   def index
+    @tag = params[:tag]
     @items = Item.all
+    @items = Item.tagged_with(@tag) if !@tag.nil? 
     respond_with(@items)
   end
 
@@ -55,6 +57,6 @@ class ItemsController < ApplicationController
   end
   
   def item_params
-    params.require(:item).permit(:title, :description, :status, :item_images)
+    params.require(:item).permit(:title, :description, :status, :item_images, :tags)
   end
 end

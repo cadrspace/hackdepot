@@ -118,6 +118,9 @@ GEM
       mongoid (~> 4.0)
     mongoid-paperclip (0.0.9)
       paperclip (>= 2.3.6)
+    mongoid_taggable (1.1.1)
+      mongoid (>= 3)
+      rake
     moped (2.0.4)
       bson (~> 2.2)
       connection_pool (~> 2.0)
@@ -258,6 +261,7 @@ DEPENDENCIES
   mongoid (~> 4)!
   mongoid-enum
   mongoid-paperclip
+  mongoid_taggable
   omniauth
   omniauth-facebook
   omniauth-github

@@ -10,6 +10,7 @@ development:
       # of host:port pairs. (required)
       hosts:
         - 192.168.0.29:27017
+#        - 172.20.10.4:27017
       options:
         # Change the default write concern. (default = { w: 1 })
         # write:

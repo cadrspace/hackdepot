@@ -23,6 +23,8 @@
             = link_to item.title, item
             p style="color:gray"
               = item.description
+            - item.tags_array.each do |i|
+              = link_to i, "/items/tag/" + i, :class => "label label-success"
           td
             span.label.label-success.cr-label-status
               = item.status
