@@ -1,3 +1,5 @@
+![HackDepot](https://github.com/cadrspace/hackdepot/blob/wip-logo/doc/logo.png)
+
 # HackDepot
 
 Hackspace inventory platform
