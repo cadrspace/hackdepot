@@ -30,6 +30,8 @@ ru:
         one: "Элемент"
         other: "Элементы"
   simple_form:
+    required:
+      text: Обязательное поле
     error_notification:
       default_message: "Возникли ошибки:"
     labels:
