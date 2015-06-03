@@ -11,21 +11,19 @@ Hackspace inventory platform
 
 ## Installation
 
-1. Install [rvm](http://rvm.io)
-2. Install ruby through RVM
-3. Go to the project root
-4. Change database credentials in **config/mongoid.yml**
-5. Install the needed gems:
+- Install [rvm](http://rvm.io)
+- Install ruby through RVM
+- Go to the project root
+- Change database credentials in **config/mongoid.yml**
+- Install the needed gems:
 ```
 $ bundle install
 ```
-
-6. Configure the database:
+- Configure the database:
 ```
 $ rake db:setup
 ```
-
-7. Start the server:
+- Start the server:
 ```
 $ rails s
 ```
