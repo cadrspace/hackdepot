@@ -1,4 +1,4 @@
-![HackDepot](https://github.com/cadrspace/hackdepot/blob/wip-logo/doc/logo.png)
+![HackDepot](https://github.com/cadrspace/hackdepot/blob/master/doc/logo.png)
 
 # HackDepot
 
