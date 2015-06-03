@@ -4,32 +4,31 @@
 
 Hackspace inventory platform
 
-## Installation & requirements
+## Requirements
 
-Ruby >= 2.2.2
-MongoDB >= 3.x
+- Ruby >= 2.2.2
+- MongoDB >= 3.x
 
-You need to install rvm http://rvm.io
-Install ruby through RVM
-go to project root
+## Installation
 
-change database credentials in **config/mongoid.yml**
-
+1. Install [rvm](http://rvm.io)
+2. Install ruby through RVM
+3. Go to the project root
+4. Change database credentials in **config/mongoid.yml**
+5. Install the needed gems:
 ```
-bundle install
-```
-
-```
-rake db:setup
+$ bundle install
 ```
 
-Start server 
-
+6. Configure the database:
 ```
-rails s 
+$ rake db:setup
 ```
 
-
+7. Start the server:
+```
+$ rails s
+```
 
 ## Usage
 
@@ -43,16 +42,18 @@ rails s
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request
 
+Please refer [the official Git book](https://www.git-scm.com/book/)
+for details on how to work with Git.
+
 ## History
 
 Initial commit
 
 ## Roadmap
 
-Search by tags
-Generate QR code
-Material design
-
+- Search by tags
+- Generate QR code
+- Material design
 
 ## Credits
 
@@ -61,4 +62,4 @@ Material design
 
 ## License
 
-GPL v2
+GNU GPLv2
