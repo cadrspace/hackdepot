@@ -23,14 +23,21 @@ $ bundle install
 ```
 $ rake db:setup
 ```
-- Start the server:
+- Start the production server:
 ```
-$ rails s
+$ export RAILS_ENV=production
+$ rails server
 ```
+
+Alternatively you can use `hackdepot` script that starts the
+production service as a daemon.
+
+The application comes with a System V init script `etc/init.debian`
+that allows you to start the HackDepot service on the boot and manage
+it with the system tools.  Copy the script to `/etc/init.d/hackdepot`
+and adjust it to your needs (see the comments in the script).
 
 ## Usage
-
--- 
 
 ## Contributing
 
