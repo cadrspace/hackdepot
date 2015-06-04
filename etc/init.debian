@@ -46,6 +46,7 @@ DAEMON_USER=hackdepot
 # Start the daemon.
 do_start()
 {
+    export SECRET_KEY_BASE
     [ ! -e $PIDFILE_DIR ] && mkdir $PIDFILE_DIR && chown $DAEMON_USER $PIDFILE_DIR
     start-stop-daemon --start --quiet --pidfile $PIDFILE --chdir $HACKDEPOT_DIR \
                       --chuid $DAEMON_USER --exec $DAEMON --test > /dev/null \
