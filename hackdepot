@@ -1,0 +1,13 @@
+#!/bin/bash
+
+### hackdepot -- Start HackDepot production server.
+
+IFS=$' '
+RAILS=rails
+RAILS_OPT=(--environment=production --daemon)
+
+bash -l -c "$RAILS server ${RAILS_OPT[*]} $@"
+
+exit $?
+
+### hackdepot ends here.
