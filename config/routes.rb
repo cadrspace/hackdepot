@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   get '/about' => 'pages#about'
+  get '/profile(/:id)' => 'users#profile', as: 'profile'
+#  get '/profile/:id' => 'users#profile', as: 'profile'
   root 'items#index'  
 
   # Example of regular route:

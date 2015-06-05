@@ -11,6 +11,7 @@
     thead
       tr
         th Заголовок
+        th Кто добавил
         th style="width:10px" 
           | Статус
         th style="width:140px"
@@ -25,6 +26,9 @@
               = item.description
             - item.tags_array.each do |i|
               = link_to i, "/items/tag/" + i, :class => "label label-success"
+          td
+            - if item.user
+              = link_to item.user.email, profile_path(item.user)
           td
             span.label.label-success.cr-label-status
               = item.status

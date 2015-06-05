@@ -36,6 +36,20 @@ html
             li
               a href="/about"
                 | About
+
+            - if user_signed_in?
+              li
+                = link_to "Вы вошли как #{current_user.email}", profile_path
+              li 
+                = link_to t('sign_out'), destroy_user_session_path, :method => :delete
+
+            - if !user_signed_in?
+              li
+                = link_to t('sign_in'), new_user_session_path
+              li
+                = link_to t('sign_up'), new_user_registration_path
+
+
     .container
       - flash.each do |name, msg|
         = content_tag :div, :class => "alert alert-#{ name == :error ? "danger" : "success" } alert-dismissable", :role => "alert" do

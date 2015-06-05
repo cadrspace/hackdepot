@@ -15,6 +15,10 @@ ru:
       title: Название
     errors:
       models:
+        user:
+          attributes:
+            email:
+              taken: Этот email уже используется
         item:
           attributes:
             title:

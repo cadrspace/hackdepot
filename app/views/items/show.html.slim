@@ -19,6 +19,8 @@
         small
           i
             = @item.created_at
+            | &nbsp;by&nbsp;
+            = @item.user.email
     dl.dl-horizontal
     p        
       - @item.tags_array.each do |i|
