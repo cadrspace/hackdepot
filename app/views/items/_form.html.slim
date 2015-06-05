@@ -8,9 +8,10 @@
     = f.input :tags 
     / = f.input :item_image, as: :file, input_html: {multiple: true} 
     = f.input :item_images, as: :file, input_html: {:multiple => true, name: "item_images[image][]"}
+
+    - @item.item_images.each do |i|
+      = image_tag i.image.url(:thumb)
   
-
-
 
   .form-actions
     = f.button :submit, class: 'btn btn-success', :value => t("submit")

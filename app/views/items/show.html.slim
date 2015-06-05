@@ -19,8 +19,9 @@
         small
           i
             = @item.created_at
-            | &nbsp;by&nbsp;
-            = @item.user.email
+            - if @item.user
+              | &nbsp;by&nbsp;
+              = @item.user.email
     dl.dl-horizontal
     p        
       - @item.tags_array.each do |i|
@@ -29,3 +30,6 @@
       = @item.description
     - @item.item_images.each do |i|
       = image_tag i.image.url(:thumb)
+
+    h3 QR code
+    = raw @qr.as_html

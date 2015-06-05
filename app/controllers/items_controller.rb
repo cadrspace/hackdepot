@@ -1,3 +1,5 @@
+require 'rqrcode'
+
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
@@ -13,7 +15,8 @@ class ItemsController < ApplicationController
   end
 
   def show
-    respond_with(@item)
+    @qr = RQRCode::QRCode.new( @item.id.to_s, :size => 4, :level => :h )
+    respond_with(@item, @qr)
   end
 
   def new
@@ -52,6 +55,10 @@ class ItemsController < ApplicationController
   def destroy
     @item.destroy
     respond_with(@item)
+  end
+
+  def images_flush
+    @item.item_images.destroy_all
   end
 
   private
