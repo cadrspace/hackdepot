@@ -32,10 +32,10 @@ html
           ul.nav.navbar-nav
             li.active
               a href="#"
-                | Home
+                = t('home')
             li
               a href="/about"
-                | About
+                = t('about')
 
             - if user_signed_in?
               li
