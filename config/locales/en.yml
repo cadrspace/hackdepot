@@ -24,4 +24,10 @@ en:
   sign_in: Sign In
   sign_out: Sign Out
   sign_up: Sign Up
+  items:
+    table:
+      header: Header
+      creator: Creator
+      status: Status
+      date: Creation Date
   hello: "Hello world"

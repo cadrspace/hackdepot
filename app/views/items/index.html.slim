@@ -10,12 +10,14 @@
   table.table.table-bordered.table-hover
     thead
       tr
-        th Заголовок
-        th Кто добавил
+        th
+          = t('items.table.header')
+        th
+          = t('items.table.crator')
         th style="width:10px" 
-          | Статус
+          = t('items.table.status')
         th style="width:140px"
-          | Дата добавления
+          = t('items.table.date')
         th style="width:100px"
     tbody
       - @items.each do | item |

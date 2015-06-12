@@ -56,6 +56,11 @@ ru:
     add: Добавить
     confirm: Вы уверены ?
     new: Добавить новый
+    table:
+      header: Заголовок
+      creator: Кто добавил
+      status: Статус
+      date: Дата добавления
   places:
     add: Добавить
   date:
