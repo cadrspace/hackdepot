@@ -1,6 +1,12 @@
 ru:
   home: Главная страница
   about: О сервисе
+  about_message: >-
+    HackDepot -- это система инвентаризации, которая помогает
+    отслеживать вещи в местах, управляемых сообществом, вроде
+    %{hackerspaces_link}.
+  about_message_hackerspaces: хакерспейсов
+  about_repository: Репозиторий
   sign_in: Войти
   sign_out: Выйти
   sign_up: Зарегистрироваться
