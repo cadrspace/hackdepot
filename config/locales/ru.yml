@@ -17,6 +17,8 @@ ru:
   editing: Редактирование
   destroy: Удалить
   details: Подробнее
+  user:
+    profile: Профиль
   enums:
     status:
       free: Свободно

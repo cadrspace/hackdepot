@@ -39,4 +39,6 @@ en:
       creator: Creator
       status: Status
       date: Creation Date
+  user:
+    profile_header: Profile
   hello: "Hello world"
