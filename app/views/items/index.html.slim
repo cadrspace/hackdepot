@@ -48,5 +48,5 @@
     h1
       = t "items.listing"
       p
-        = t('items.sign_in_message') 
+        == t('items.sign_in_message', sign_in_link: link_to(t('sign_in'),  new_user_session_path), sign_up_link: link_to(t('sign_up'), new_user_registration_path))
         
