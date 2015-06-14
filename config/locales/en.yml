@@ -20,12 +20,13 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 en:
   home: Home
-  about: About
-  about_message: >-
-    HackDepot is an inventory tool that helps to keep track of things
-    in community-driven places such as a %{hackerspaces_link}.
-  about_message_hackerspaces: hackerspaces
-  about_repository: Repository
+  about:
+    header: About
+    message: >-
+      HackDepot is an inventory tool that helps to keep track of things
+      in community-driven places such as a %{hackerspaces_link}.
+    message_hackerspaces: hackerspaces
+    repository: Repository
   sign_in: Sign In
   sign_out: Sign Out
   sign_up: Sign Up

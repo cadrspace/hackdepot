@@ -1,10 +1,10 @@
 .row
   .col-md-12
     h1
-      = t('about')
+      = t('about.header')
     dl.dl-horizontal
       p
-        == t('about_message', hackerspaces_link: link_to(t('about_message_hackerspaces'), 'http://hackerspaces.org/'))
+        == t('about.message', hackerspaces_link: link_to(t('about.message_hackerspaces'), 'http://hackerspaces.org/'))
         ul
           li
-            == link_to(t('about_repository'), "https://github.com/cadrspace/hackdepot")
+            == link_to(t('about.repository'), "https://github.com/cadrspace/hackdepot")
