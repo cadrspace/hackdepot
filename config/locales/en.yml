@@ -25,6 +25,9 @@ en:
   sign_out: Sign Out
   sign_up: Sign Up
   items:
+    sign_in_message: >
+      You are not logged in.  Please sign in or sign up to view the
+      items list.
     table:
       header: Header
       creator: Creator
