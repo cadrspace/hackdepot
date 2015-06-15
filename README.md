@@ -7,8 +7,8 @@ community-operated places such as
 [hackerspaces](http://hackerspaces.org/).
 
 Though HackDepot has no stable release yet, we're hoping to make the
-first release as soon as it gets to the point where it fulfills basic
-needs of [our own hackerspace](http://cadrspace.ru/).
+first release as soon as it gets to the point where it fulfills the
+basic needs of [our own hackerspace](http://cadrspace.ru/).
 
 ## Requirements
 
