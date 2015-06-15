@@ -2,7 +2,13 @@
 
 # HackDepot
 
-Hackspace inventory platform
+HackDepot is a service that helps to keep track of things in
+community-operated places such as
+[hackerspaces](http://hackerspaces.org/).
+
+Though HackDepot has no stable release yet, we're hoping to make the
+first release as soon as it gets to the point where it fulfills basic
+needs of [our own hackderspace](http://cadrspace.ru/).
 
 ## Requirements
 
