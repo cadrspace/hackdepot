@@ -33,23 +33,23 @@ html
 
         #navbar.collapse.navbar-collapse
           ul.nav.navbar-nav
-            li.active
+            li class="#{'active' if current_page? '/'}"
               a href="#"
                 = t('home')
-            li
+            li class="#{'active' if current_page? '/about'}"
               a href="/about"
                 = t('about.header')
 
             - if user_signed_in?
-              li
+              li class="#{'active' if current_page? profile_path}"
                 = link_to "Вы вошли как #{current_user.email}", profile_path
               li 
                 = link_to t('sign_out'), destroy_user_session_path, :method => :delete
 
             - if !user_signed_in?
-              li
+              li class="#{'active' if current_page? new_user_session_path}"
                 = link_to t('sign_in'), new_user_session_path
-              li
+              li class="#{'active' if current_page? new_user_registration_path}"
                 = link_to t('sign_up'), new_user_registration_path
 
 
