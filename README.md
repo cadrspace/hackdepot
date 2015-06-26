@@ -58,16 +58,6 @@ for details on how to work with Git.
 
 ## Roadmap
 
-- Make it possible to enable/disable user registration in a
-  configuration file.  In addition, implement a way of adding new
-  users to the system for an administrator (e.g. by means of a console
-  tool on a server and/or through an administrator interface in the
-  service itself).
-
-  Rationale: currently the service blocks access to the list of items
-  and to items themselves to unauthorized (unauthenticated) users, but
-  given the fact that the registration is open for everyone, it's easy
-  to circumvent the access control.
 - Search by tags
 - Generate QR code
 - Material design
