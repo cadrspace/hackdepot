@@ -56,10 +56,6 @@ and adjust it to your needs (see the comments in the script).
 Please refer [the official Git book](https://www.git-scm.com/book/)
 for details on how to work with Git.
 
-## History
-
-Initial commit
-
 ## Roadmap
 
 - Make it possible to enable/disable user registration in a
