@@ -7,7 +7,7 @@ html
     meta name="description" content=""
     meta name="author" content=""
     title
-      | hackspace storage
+      | HackDepot
     /! HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
     /[if lt IE 9]
       = javascript_include_tag "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js", "https://oss.maxcdn.com/respond/1.4.2/respond.min.js"
@@ -27,26 +27,29 @@ html
             span.icon-bar
             span.icon-bar
             span.icon-bar
+          a href='/'
+            img src="/images/logo-white.png" width="32px" align="left" style="padding-right: 10px; padding-top: 10px"
           = link_to "HackDepot", "/", :class => "navbar-brand"
+
         #navbar.collapse.navbar-collapse
           ul.nav.navbar-nav
-            li.active
-              a href="#"
-                | Home
-            li
+            li class="#{'active' if current_page? '/'}"
+              a href="/"
+                = t('home')
+            li class="#{'active' if current_page? '/about'}"
               a href="/about"
-                | About
+                = t('about.header')
 
             - if user_signed_in?
-              li
+              li class="#{'active' if current_page? profile_path}"
                 = link_to "Вы вошли как #{current_user.email}", profile_path
               li 
                 = link_to t('sign_out'), destroy_user_session_path, :method => :delete
 
             - if !user_signed_in?
-              li
+              li class="#{'active' if current_page? new_user_session_path}"
                 = link_to t('sign_in'), new_user_session_path
-              li
+              li class="#{'active' if current_page? new_user_registration_path}"
                 = link_to t('sign_up'), new_user_registration_path
 
 

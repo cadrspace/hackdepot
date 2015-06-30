@@ -1,14 +1,13 @@
 .row
   .col-md-12
-    h1 About
+    h1
+      = t('about.header')
     dl.dl-horizontal
       p
-        | HackDepot is an inventory tool that helps to keep track of 
-        | things in community-driven places such as 
-        a href="http://hackerspaces.org/" hackerspaces
-        | .
+        == t('about.message', hackerspaces_link: link_to(t('about.message_hackerspaces'), 'http://hackerspaces.org/'))
         ul
-          li: a href="https://github.com/cadrspace/hackdepot" title="HackDepot repository" Repository
-
+          li
+            = link_to(t('about.repository'), "https://github.com/cadrspace/hackdepot")
       p 
         b User registartion disabled, ask administrators for an account
+

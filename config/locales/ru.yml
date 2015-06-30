@@ -1,10 +1,24 @@
 ru:
+  home: Главная страница
+  about:
+    header: О сервисе
+    message: >-
+      HackDepot -- это система инвентаризации, которая помогает
+      отслеживать вещи в местах, управляемых сообществом, вроде
+      %{hackerspaces_link}.
+    message_hackerspaces: хакерспейсов
+    repository: Репозиторий
+  sign_in: Войти
+  sign_out: Выйти
+  sign_up: Зарегистрироваться
   back: Назад
   submit: "Отправить"
   edit: Редактировать
   editing: Редактирование
   destroy: Удалить
   details: Подробнее
+  user:
+    profile: Профиль
   enums:
     status:
       free: Свободно
@@ -22,11 +36,11 @@ ru:
         item:
           attributes:
             title:
-              blank: Поле название неможет быть пустым
+              blank: Поле название не может быть пустым
             description:
-              blank: Поле описание неможет быть пустым
+              blank: Поле описание не может быть пустым
             status:
-              blank: Поле статус неможет быть пустым              
+              blank: Поле статус не может быть пустым              
 
   activerecord:
     models:
@@ -51,6 +65,14 @@ ru:
     add: Добавить
     confirm: Вы уверены ?
     new: Добавить новый
+    sign_in_message: >
+      Вы не вошли в систему.  %{sign_in_link} или %{sign_up_link},
+      чтобы посмотреть список вещей.
+    table:
+      header: Заголовок
+      creator: Кто добавил
+      status: Статус
+      date: Дата добавления
   places:
     add: Добавить
   date:

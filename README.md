@@ -2,7 +2,13 @@
 
 # HackDepot
 
-Hackspace inventory platform
+HackDepot is a service that helps to keep track of things in
+community-operated places such as
+[hackerspaces](http://hackerspaces.org/).
+
+Though HackDepot has no stable release yet, we're hoping to make the
+first release as soon as it gets to the point where it fulfills the
+basic needs of [our own hackerspace](http://cadrspace.ru/).
 
 ## Requirements
 
@@ -49,10 +55,6 @@ and adjust it to your needs (see the comments in the script).
 
 Please refer [the official Git book](https://www.git-scm.com/book/)
 for details on how to work with Git.
-
-## History
-
-Initial commit
 
 ## Roadmap
 
