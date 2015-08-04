@@ -4,7 +4,7 @@ class Item
   include Mongoid::Timestamps
   include SimpleEnum::Mongoid
 
-  tags_separator ',' 
+  tags_separator ','
 
   field :title, type: String
   field :description, type: String
@@ -20,7 +20,6 @@ class Item
   validates_presence_of :title
   validates_presence_of :description
   validates_presence_of :status
-  
+
   belongs_to :user
-  
 end
