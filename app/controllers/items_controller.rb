@@ -4,13 +4,13 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   before_filter :authenticate_user!, :except => [:index]
-  
+
   respond_to :html
 
   def index
     @tag = params[:tag]
     @items = Item.all
-    @items = Item.tagged_with(@tag) if !@tag.nil? 
+    @items = Item.tagged_with(@tag) if !@tag.nil?
     respond_with(@items)
   end
 
@@ -40,7 +40,7 @@ class ItemsController < ApplicationController
     respond_with(@item)
   end
 
-  def update       
+  def update
     if @item.update(item_params)
       if params[:item_images]
         params[:item_images]['image'].each do |a|
@@ -65,7 +65,7 @@ class ItemsController < ApplicationController
   def set_item
     @item = Item.find(params[:id])
   end
-  
+
   def item_params
     params.require(:item).permit(:title, :description, :status, :item_images, :tags)
   end
