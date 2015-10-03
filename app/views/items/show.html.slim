@@ -32,4 +32,4 @@
       = image_tag i.image.url(:thumb)
 
     h3 QR code
-    = raw @qr.as_html
+    img(src="http://chart.apis.google.com/chart?cht=qr&chs=150x150&chl=#{request.original_url}&chld=H|0")

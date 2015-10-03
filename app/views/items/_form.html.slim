@@ -2,16 +2,41 @@
   = f.error_notification
 
   .form-inputs
+    = label_tag :parent_title_id, 'Parent'
+    = text_field_tag :parent_title_id, '', class: 'string optional form-control'
+    = f.hidden_field :parent_id
+    .hd-form-parents-block  
     = f.input :title
     = f.input :description
     = f.input :status, as: :select, collection: enum_option_pairs(Item, :status)
     = f.input :tags 
+    = f.input :serial
     / = f.input :item_image, as: :file, input_html: {multiple: true} 
     = f.input :item_images, as: :file, input_html: {:multiple => true, name: "item_images[image][]"}
 
-    - @item.item_images.each do |i|
-      = image_tag i.image.url(:thumb)
-  
+ 
+    - if @item.item_images.count > 0
+      .panel.panel-success
+        .panel-heading
+          = t "Images"
+        .panel-body
+          - @item.item_images.each do |i|
+            = image_tag i.image.url(:thumb)
+ 
 
+    .panel.panel-primary
+      .panel-heading
+        = t "Special fields"        
+      .panel-body
+        = f.simple_fields_for :item_fields do |b|
+          .hd-form-fields-block
+            .form-group.string.optinal
+              = b.label :name
+              = b.text_field :name, class: "string optional form-control", size: "10px"
+            .form-group.string.optinal
+              = b.label :value
+              = b.text_field :value, class: "string optional form-control"
+
+  br
   .form-actions
     = f.button :submit, class: 'btn btn-success', :value => t("submit")
