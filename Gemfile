@@ -78,6 +78,7 @@ gem 'underscore-rails'
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem "mongoid-paperclip", :require => "mongoid_paperclip"
 gem "rqrcode" 
+gem 'kaminari'
 
 # geo
 gem 'gmaps4rails'
