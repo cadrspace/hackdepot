@@ -38,13 +38,11 @@
             = link_to i.title, i
             |  
 
-
-
-        
-    .panel.panel-default
-      .panel-body
-        - @item.item_images.each do |i|
-          = image_tag i.image.url(:thumb)
+    - if @item.item_images.count > 0
+      .panel.panel-default
+        .panel-body
+          - @item.item_images.each do |i|
+            = image_tag i.image.url(:thumb)
      
     .panel.panel-default
       .panel-body
