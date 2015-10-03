@@ -48,3 +48,8 @@ td.white { border-color: #fff; }
     padding: 5px;
     marging: 5px;
 }
+
+.hd-panel-head-link {
+    color: white;
+    text-decoration: underline
+}

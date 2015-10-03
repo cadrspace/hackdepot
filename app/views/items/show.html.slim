@@ -1,35 +1,52 @@
 .row
   .col-md-12
-    .page-header
-      = link_to items_path, :class => 'btn btn-default' do 
-        span.glyphicon.glyphicon-list-alt
-        | &nbsp;
-        = t("back")
-      = link_to edit_item_path(@item), :class => 'btn btn-primary' do 
-        span.glyphicon.glyphicon-pencil
-        | &nbsp;
-        = t("edit")
-      h1
+      
+    .panel.panel-primary
+      .panel-heading
         = @item.title
         | &nbsp;
-        span.label.label-success.cr-label-status
-          = @item.status        
-        | &nbsp;
-        br
-        small
-          i
-            = @item.created_at
-            - if @item.user
-              | &nbsp;by&nbsp;
-              = @item.user.email
-    dl.dl-horizontal
-    p        
-      - @item.tags_array.each do |i|
-        = link_to i, "/items/tag/" + i, :class => "label label-success"
-    p
-      = @item.description
-    - @item.item_images.each do |i|
-      = image_tag i.image.url(:thumb)
+        i
+          = @item.created_at
+        | &nbsp;by 
+        = link_to @item.user.email, '', class: 'hd-panel-head-link'
+        - if @item.parent
+          |  &rarr; 
+          = t 'Part of'
+          |  
+          = link_to @item.parent.title + ' ' + "(#{@item.parent.id})", @item.parent, class: 'hd-panel-head-link'
 
-    h3 QR code
-    img(src="http://chart.apis.google.com/chart?cht=qr&chs=150x150&chl=#{request.original_url}&chld=H|0")
+        = link_to t('edit'), edit_item_path(@item), :class => "btn btn-success btn-xs pull-right"
+        
+      .panel-body
+        = @item.description
+        dl.dl-horizontal
+        span 
+          = t "Status"
+          | : 
+          span.label.label-info
+            = @item.status
+
+        dl.dl-horizontal        
+        p
+          - @item.tags_array.each do |i|
+            = link_to i, "/items/tag/" + i, :class => "label label-success"
+
+        - if @item.children.count > 0
+          = t 'Contains'
+          | :&nbsp;
+          - @item.children.each do |i|
+            = link_to i.title, i
+            |  
+
+
+
+        
+    .panel.panel-default
+      .panel-body
+        - @item.item_images.each do |i|
+          = image_tag i.image.url(:thumb)
+     
+    .panel.panel-default
+      .panel-body
+        img(src="http://chart.apis.google.com/chart?cht=qr&chs=150x150&chl=#{request.original_url}&chld=H|0")
+

@@ -12,7 +12,7 @@
           tr
             th
               = t('items.table.header')
-            th
+            th style="width:10px"
               = t('items.table.creator')
             th style="width:10px" 
               = t('items.table.status')
@@ -42,6 +42,7 @@
                       = link_to t('edit'), edit_item_path(item) 
                       br
                         = link_to t('destroy'), item, method: :delete, data: { confirm: t('items.confirm') }
+      = paginate @items
 
 - else
   .page-header

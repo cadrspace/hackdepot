@@ -9,8 +9,8 @@ class ItemsController < ApplicationController
 
   def index
     @tag = params[:tag]
-    @items = Item.all
-    @items = Item.tagged_with(@tag) if !@tag.nil?
+    @items = Item.order_by(:id => 'desc').page params[:page]
+    @items = Item.tagged_with(@tag).page params[:page] if !@tag.nil?
     respond_with(@items)
   end
 
