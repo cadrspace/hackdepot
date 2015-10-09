@@ -23,6 +23,10 @@
      id="defs4">
     <inkscape:path-effect
        effect="spiro"
+       id="path-effect4209"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
        id="path-effect7329"
        is_visible="true" />
     <pattern
@@ -329,6 +333,30 @@
        effect="spiro"
        id="path-effect7329-88"
        is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3044-5"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3044-5-3"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3044-5-3-2"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3044-5-2"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3044-5-2-7"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3044-5-2-0"
+       is_visible="true" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -337,12 +365,12 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4881567"
-     inkscape:cx="448.90195"
-     inkscape:cy="625.7744"
+     inkscape:zoom="1.0522857"
+     inkscape:cx="325.55727"
+     inkscape:cy="714.36555"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="false"
+     showgrid="true"
      inkscape:window-width="1278"
      inkscape:window-height="1004"
      inkscape:window-x="0"
@@ -420,7 +448,7 @@
 https://github.com/cadrspace/hackdepot</dc:description>
         <dc:rights>
           <cc:Agent>
-            <dc:title></dc:title>
+            <dc:title />
           </cc:Agent>
         </dc:rights>
         <cc:license
@@ -448,75 +476,16 @@ https://github.com/cadrspace/hackdepot</dc:description>
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1;fill-rule:nonzero"
-       d="m 301.1811,361.4173 53.14961,-53.14961 88.58268,0 c 9.62612,0 19.37837,0.31391 28.59837,3.08046 9.22001,2.76655 17.73533,7.8386 24.55124,14.63607 11.57473,11.54343 18.13725,27.94973 17.71654,44.29134 l -10e-6,79.72442 0,0 -70.86614,70.86614 0,-79.72441 c 0.42071,-16.34161 -6.14181,-32.74791 -17.71654,-44.29134 -6.81591,-6.79747 -15.33123,-11.86952 -24.55124,-14.63607 -9.22,-2.76655 -18.97225,-3.08046 -28.59837,-3.08046 l -70.86614,0 0,-124.01575 -17.71653,0 0,265.74803 70.86614,-70.86614 0,-53.14961"
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 301.1811,361.4173 49.6063,-42.51968 63.77953,0 c 10.65744,1.45328 20.78937,6.51924 28.34646,14.17322 9.17857,9.29624 14.40857,22.37126 14.17322,35.43307 l 0,81.49607 -31.88976,70.86614 0,-95.66929 c 0,-3.48352 -0.0338,-6.98028 -0.54799,-10.42564 -0.51422,-3.44535 -1.50536,-6.82759 -3.04166,-9.95404 -3.07259,-6.25289 -8.29967,-11.23461 -14.12689,-15.05339 -10.45833,-6.85371 -22.92912,-10.59495 -35.43307,-10.62992 l -70.86614,0 0,-124.01575 -17.71653,0 0,265.74803 70.86614,-70.86614 0,-53.14961"
        id="path2999"
        inkscape:path-effect="#path-effect3001"
-       inkscape:original-d="m 301.1811,361.4173 53.14961,-53.14961 88.58268,0 c 0,0 36.4463,1.01322 53.14961,17.71653 14.6154,14.6154 17.71654,44.29134 17.71654,44.29134 l -10e-6,79.72442 0,0 -70.86614,70.86614 0,-79.72441 c 0,0 -3.10114,-29.67594 -17.71654,-44.29134 -16.70331,-16.70331 -53.14961,-17.71653 -53.14961,-17.71653 l -70.86614,0 0,-124.01575 -17.71653,0 0,265.74803 70.86614,-70.86614 0,-53.14961"
+       inkscape:original-d="m 301.1811,361.4173 49.6063,-42.51968 63.77953,0 c 0,0 14.17323,3.5433 28.34646,14.17322 16.53544,12.40158 14.17322,35.43307 14.17322,35.43307 0,35.43307 0,28.34646 0,81.49607 l -31.88976,70.86614 c 0,0 0,-60.23622 0,-95.66929 0,-17.71654 -3.54331,-21.25984 -17.71654,-35.43307 -14.17323,-14.17322 -35.43307,-10.62992 -35.43307,-10.62992 l -70.86614,0 0,-124.01575 -17.71653,0 0,265.74803 70.86614,-70.86614 0,-53.14961"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccscccccsccccccc"
+       sodipodi:nodetypes="cccscccszccccccc"
        inkscape:export-filename="/home/avp/graph/cadr/hackdepot/logo.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
-    <g
-       id="g7032"
-       transform="translate(0.90862674,-20.418418)">
-      <path
-         inkscape:export-ydpi="300"
-         inkscape:export-xdpi="300"
-         inkscape:export-filename="/home/avp/graph/cadr/hackdepot/logo.png"
-         inkscape:path-effect="#path-effect3044-4"
-         sodipodi:nodetypes="cc"
-         inkscape:connector-curvature="0"
-         inkscape:original-d="m 354.28571,556.29919 77.99775,-77.95276"
-         id="path3042-9"
-         d="m 354.28571,556.29919 77.99775,-77.95276"
-         style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <path
-         inkscape:export-ydpi="300"
-         inkscape:export-xdpi="300"
-         inkscape:export-filename="/home/avp/graph/cadr/hackdepot/logo.png"
-         inkscape:path-effect="#path-effect3087-3"
-         sodipodi:nodetypes="ccccc"
-         inkscape:connector-curvature="0"
-         inkscape:original-d="m 329.52756,510.2362 70.86615,0 -10.62993,10.62992 -70.86614,0 z"
-         id="path3085-9"
-         d="m 329.52756,510.2362 70.86615,0 -10.62993,10.62992 -70.86614,0 10.62992,-10.62992"
-         style="fill:#828282;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <path
-         inkscape:export-ydpi="300"
-         inkscape:export-xdpi="300"
-         inkscape:export-filename="/home/avp/graph/cadr/hackdepot/logo.png"
-         inkscape:path-effect="#path-effect3044"
-         sodipodi:nodetypes="cc"
-         inkscape:connector-curvature="0"
-         inkscape:original-d="m 283.34779,556.29919 79.9858,-80.33078"
-         id="path3042"
-         d="m 283.34779,556.29919 79.9858,-80.33078"
-         style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <path
-         inkscape:export-ydpi="300"
-         inkscape:export-xdpi="300"
-         inkscape:export-filename="/home/avp/graph/cadr/hackdepot/logo.png"
-         inkscape:path-effect="#path-effect3087"
-         sodipodi:nodetypes="ccccc"
-         inkscape:connector-curvature="0"
-         inkscape:original-d="m 357.87402,481.88974 70.86615,0 -10.62993,10.62992 -70.86614,0 z"
-         id="path3085"
-         d="m 357.87402,481.88974 70.86615,0 -10.62993,10.62992 -70.86614,0 10.62992,-10.62992"
-         style="fill:#828282;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <path
-         inkscape:export-ydpi="300"
-         inkscape:export-xdpi="300"
-         inkscape:export-filename="/home/avp/graph/cadr/hackdepot/logo.png"
-         inkscape:path-effect="#path-effect3087-9"
-         sodipodi:nodetypes="ccccc"
-         inkscape:connector-curvature="0"
-         inkscape:original-d="m 301.1811,538.58266 70.86615,0 -10.62993,10.62992 -70.86614,0 z"
-         id="path3085-5"
-         d="m 301.1811,538.58266 70.86615,0 -10.62993,10.62992 -70.86614,0 10.62992,-10.62992"
-         style="fill:#828282;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-    </g>
     <g
        id="g7050"
        style="fill:none;stroke:#000000;stroke-opacity:1">
@@ -584,72 +553,81 @@ https://github.com/cadrspace/hackdepot</dc:description>
          d="m 347.24409,457.08659 0,-46.06299 0,0"
          style="fill:none;stroke:#000000;stroke-width:3.99999976000000013;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none" />
     </g>
-    <g
-       id="g7039"
-       style="fill:none;stroke:#000000;stroke-opacity:1">
-      <path
-         inkscape:connector-curvature="0"
-         inkscape:original-d="m 450,513.7795 0,-46.06299 0,0"
-         inkscape:path-effect="#path-effect6001-4"
-         id="path5999-63"
-         d="m 450,513.7795 0,-46.06299 0,0"
-         style="fill:none;stroke:#000000;stroke-width:3.99999976000000013;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none" />
-      <path
-         inkscape:connector-curvature="0"
-         inkscape:original-d="m 457.08662,506.69289 0,-46.06299 0,0"
-         inkscape:path-effect="#path-effect6001-1-9"
-         id="path5999-4-7"
-         d="m 457.08662,506.69289 0,-46.06299 0,0"
-         style="fill:none;stroke:#000000;stroke-width:3.99999976000000013;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none" />
-      <path
-         inkscape:connector-curvature="0"
-         inkscape:original-d="m 464.17323,499.60627 0,-46.06299 0,0"
-         inkscape:path-effect="#path-effect6001-6-7"
-         id="path5999-1-7"
-         d="m 464.17323,499.60627 0,-46.06299 0,0"
-         style="fill:none;stroke:#000000;stroke-width:3.99999976000000013;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none" />
-      <path
-         inkscape:connector-curvature="0"
-         inkscape:original-d="m 471.25984,492.51966 0,-46.06299 0,0"
-         inkscape:path-effect="#path-effect6001-2-0"
-         id="path5999-10-2"
-         d="m 471.25984,492.51966 0,-46.06299 0,0"
-         style="fill:none;stroke:#000000;stroke-width:3.99999976000000013;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none" />
-      <path
-         inkscape:connector-curvature="0"
-         inkscape:original-d="m 478.34646,485.43305 0,-46.06299 0,0"
-         inkscape:path-effect="#path-effect6001-3-8"
-         id="path5999-5-0"
-         d="m 478.34646,485.43305 0,-46.06299 0,0"
-         style="fill:none;stroke:#000000;stroke-width:3.99999976000000013;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none" />
-      <path
-         inkscape:connector-curvature="0"
-         inkscape:original-d="m 485.43307,478.34643 0,-46.06299 0,0"
-         inkscape:path-effect="#path-effect6001-17-2"
-         id="path5999-50-9"
-         d="m 485.43307,478.34643 0,-46.06299 0,0"
-         style="fill:none;stroke:#000000;stroke-width:3.99999976000000013;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none" />
-      <path
-         inkscape:connector-curvature="0"
-         inkscape:original-d="m 492.51969,471.25982 0,-46.06299 0,0"
-         inkscape:path-effect="#path-effect6001-25-7"
-         id="path5999-9-5"
-         d="m 492.51969,471.25982 0,-46.06299 0,0"
-         style="fill:none;stroke:#000000;stroke-width:3.99999976000000013;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none" />
-      <path
-         inkscape:connector-curvature="0"
-         inkscape:original-d="m 499.6063,464.1732 0,-46.06299 0,0"
-         inkscape:path-effect="#path-effect6001-21-1"
-         id="path5999-6-1"
-         d="m 499.6063,464.1732 0,-46.06299 0,0"
-         style="fill:none;stroke:#000000;stroke-width:3.99999976000000013;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none" />
-      <path
-         inkscape:connector-curvature="0"
-         inkscape:original-d="m 506.69291,457.08659 0,-46.06299 0,0"
-         inkscape:path-effect="#path-effect6001-12-9"
-         id="path5999-92-3"
-         d="m 506.69291,457.08659 0,-46.06299 0,0"
-         style="fill:none;stroke:#000000;stroke-width:3.99999976000000013;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none" />
-    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.99999976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none"
+       d="m 431.09556,506.69289 0,-46.06299 0,0"
+       id="path5999-63"
+       inkscape:path-effect="#path-effect6001-4"
+       inkscape:original-d="m 431.09556,506.69289 0,-46.06299 0,0"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.99999976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none"
+       d="m 437.23186,493.46998 0,-46.06299 0,0"
+       id="path5999-4-7"
+       inkscape:path-effect="#path-effect6001-1-9"
+       inkscape:original-d="m 437.23186,493.46998 0,-46.06299 0,0"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.99999976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none"
+       d="m 443.13057,479.55473 0,-46.06299 0,0"
+       id="path5999-1-7"
+       inkscape:path-effect="#path-effect6001-6-7"
+       inkscape:original-d="m 443.13057,479.55473 0,-46.06299 0,0"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.99999976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none"
+       d="m 448.55413,467.7573 0,-46.06299 0,0"
+       id="path5999-10-2"
+       inkscape:path-effect="#path-effect6001-2-0"
+       inkscape:original-d="m 448.55413,467.7573 0,-46.06299 0,0"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.99999976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none"
+       d="m 453.30573,458.03691 0,-46.06299 0,0"
+       id="path5999-5-0"
+       inkscape:path-effect="#path-effect6001-3-8"
+       inkscape:original-d="m 453.30573,458.03691 0,-46.06299 0,0"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 425.19685,520.86612 -35.43307,0 35.43307,-53.14961"
+       id="path3042-8"
+       inkscape:original-d="m 425.19685,520.86612 -35.43307,0 35.43307,-53.14961"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:path-effect="#path-effect3044-5"
+       inkscape:export-filename="/home/avp/graph/cadr/hackdepot/logo.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.21714163;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 315.35433,506.69289 81.49606,0"
+       id="path3042-8-0"
+       inkscape:original-d="m 315.35433,506.69289 c 27.19167,0.0965 56.69292,0 81.49606,0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/avp/graph/cadr/hackdepot/logo.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:path-effect="#path-effect3044-5-2" />
+    <path
+       id="path3042-8-0-1"
+       style="fill:none;stroke:#000000;stroke-width:3.07408524;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:original-d="m 333.07087,485.43305 c 26.42539,5.7348 51.9685,0 77.95275,0 m -127.55905,35.43307 17.71653,0 31.88977,-35.43307 28.34645,-31.88977"
+       d="m 333.07087,485.43305 77.95275,0 m -127.55905,35.43307 17.71653,0 c 10.66836,-11.77636 21.29835,-23.58746 31.88977,-35.43307 9.47978,-10.60235 18.92865,-21.23233 28.34645,-31.88977"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccc"
+       inkscape:path-effect="#path-effect3044-5-2-7" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 350.7874,467.71651 74.40945,0"
+       id="path3042-8-0-7"
+       inkscape:original-d="m 350.7874,467.71651 74.40945,0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:path-effect="#path-effect3044-5-2-0"
+       inkscape:export-filename="/home/avp/graph/cadr/hackdepot/logo.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
   </g>
 </svg>
