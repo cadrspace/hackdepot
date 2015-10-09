@@ -3,10 +3,12 @@
     .page-header
       = link_to items_path, :class => 'btn btn-default' do
         span.glyphicon.glyphicon-list-alt
-        |  Back 
+        |  
+        = t "Back"
       = link_to @item, :class => 'btn btn-primary' do
         span.glyphicon.glyphicon-info-sign
-        |  Show 
+        |  
+        = t "Show"
       h1
         = t("editing")
     = render 'form'

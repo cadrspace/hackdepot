@@ -38,8 +38,9 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'mongoid', '~> 4', github: 'mongoid/mongoid'
-gem 'mongoid-enum'
+gem 'mongoid', '~> 5.0.0.beta'
+#gem 'mongoid', '~> 5', github: 'mongoid/mongoid'
+# gem 'mongoid-enum'
 gem 'bson_ext'
 gem 'simple_enum', '~> 2.0.0' , require: 'simple_enum/mongoid'
 
@@ -56,7 +57,7 @@ gem 'carrierwave'
 gem 'rmagick', :require => 'RMagick'
 
 gem 'mongoid_taggable'
-
+gem 'mongoid-ancestry'
 
 # Authentication and authorization
 gem 'devise'
@@ -77,6 +78,7 @@ gem 'underscore-rails'
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem "mongoid-paperclip", :require => "mongoid_paperclip"
 gem "rqrcode" 
+gem 'kaminari'
 
 # geo
 gem 'gmaps4rails'

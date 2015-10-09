@@ -12,12 +12,6 @@
           tr
             th
               = t('items.table.header')
-            th
-              = t('items.table.creator')
-            th style="width:10px" 
-              = t('items.table.status')
-            th style="width:140px"
-              = t('items.table.date')
             th style="width:100px"
               tbody
                 - @items.each do | item |
@@ -26,22 +20,28 @@
                       = link_to item.title, item
                       p style="color:gray"
                         = item.description
+
+                      span 
+                        = t "Status"
+                        | : 
+                        span.label.label-info
+                          = item.status
+                      dl.dl-horizontal
                       - item.tags_array.each do |i|
                         = link_to i, "/items/tag/" + i, :class => "label label-success"
-                    td
-                      - if item.user
-                        = link_to item.user.email, profile_path(item.user)
-                    td
-                      span.label.label-success.cr-label-status
-                        = item.status
-                    td
-                      = item.created_at
+                      dl.dl-horizontal
+                      div
+                        i
+                          = item.created_at
+                        |  by 
+                        = link_to item.user.email, ''
                     td
                       = link_to t('details'), item
                       br 
                       = link_to t('edit'), edit_item_path(item) 
                       br
                         = link_to t('destroy'), item, method: :delete, data: { confirm: t('items.confirm') }
+      = paginate @items
 
 - else
   .page-header

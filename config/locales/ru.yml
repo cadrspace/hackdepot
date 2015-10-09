@@ -1,5 +1,12 @@
 ru:
   home: Главная страница
+  Special fields: Спеицальные поля
+  Part of: Часть предмета
+  Contains: Содержит
+  Parent: Родительский элемент
+  Images: Изображения
+  Back: Назад
+  Show: Показать
   about:
     header: О сервисе
     message: >-
@@ -58,7 +65,12 @@ ru:
         description: Описание
         status: Статус
         image: Изображение
+        tags: Тэги
+        serial: Серийный номер
         item_images: Изображения
+      item_fields:
+        name: Название
+        value: Значение 
 
   items:
     listing: Список

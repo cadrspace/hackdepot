@@ -37,3 +37,19 @@ td {
 
 td.black { border-color: #000; }
 td.white { border-color: #fff; }
+
+.hd-form-fields-block {
+    padding: 5px;
+    margin: 5px;
+    border: 0px dashed black;
+}
+
+.hd-form-parents-block {
+    padding: 5px;
+    marging: 5px;
+}
+
+.hd-panel-head-link {
+    color: white;
+    text-decoration: underline
+}
