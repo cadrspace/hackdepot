@@ -9,7 +9,7 @@
           = @item.created_at
         | &nbsp;by&nbsp;
         - if @item.user
-          = link_to @item.user.email, '', class: 'hd-panel-head-link'
+          = link_to @item.user.email, profile_path(@item.user), class: 'hd-panel-head-link'
         - if @item.parent
           |  &rarr; 
           = t 'Part of'
