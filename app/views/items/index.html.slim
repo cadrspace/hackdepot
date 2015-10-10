@@ -22,6 +22,11 @@
                         = item.description
 
                       span 
+                        - if not item.serial.nil? and not item.serial.empty?
+                          = t "Serial Number"
+                          | : 
+                          span.label.label-info
+                            = item.serial
                         = t "Status"
                         | : 
                         span.label.label-info
