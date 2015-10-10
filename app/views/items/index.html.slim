@@ -33,8 +33,9 @@
                       div
                         i
                           = item.created_at
-                        |  by 
-                        = link_to item.user.email, ''
+                        |  by
+                        - if item.user
+                          = link_to item.user.email, profile_path(item.user)
                     td
                       = link_to t('details'), item
                       br 
