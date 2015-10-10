@@ -43,7 +43,8 @@
       .panel.panel-default
         .panel-body
           - @item.item_images.each do |i|
-            = image_tag i.image.url(:thumb)
+            = link_to i.image.url do
+              = image_tag i.image.url(:thumb)
      
     .panel.panel-default
       .panel-body
