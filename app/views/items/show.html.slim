@@ -7,7 +7,7 @@
         | &nbsp;
         i
           = @item.created_at
-        | &nbsp;by 
+        | &nbsp;by&nbsp;
         - if @item.user
           = link_to @item.user.email, '', class: 'hd-panel-head-link'
         - if @item.parent
