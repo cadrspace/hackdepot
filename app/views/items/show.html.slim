@@ -7,8 +7,8 @@
         | &nbsp;
         i
           = @item.created_at
-        | &nbsp;by&nbsp;
         - if @item.user
+          | &nbsp;by&nbsp;
           = link_to @item.user.email, profile_path(@item.user), class: 'hd-panel-head-link'
         - if @item.parent
           |  &rarr; 
