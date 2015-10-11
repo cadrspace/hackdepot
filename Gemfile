@@ -59,6 +59,9 @@ gem 'rmagick', :require => 'RMagick'
 gem 'mongoid_taggable'
 gem 'mongoid-ancestry'
 
+# Application server
+gem 'unicorn-rails'
+
 # Authentication and authorization
 gem 'devise'
 gem 'omniauth'
@@ -79,6 +82,13 @@ gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem "mongoid-paperclip", :require => "mongoid_paperclip"
 gem "rqrcode" 
 gem 'kaminari'
+
+# deploy
+gem 'capistrano'
+gem 'capistrano-rvm'
+gem 'capistrano-bundler'
+gem 'capistrano-rails'
+gem 'capistrano-rails-console'
 
 # geo
 gem 'gmaps4rails'
