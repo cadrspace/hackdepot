@@ -34,10 +34,12 @@
 
         - if @item.children.count > 0
           = t 'Contains'
-          | :&nbsp;
-          - @item.children.each do |i|
-            = link_to i.title, i
-            |  
+          p
+            ul
+              - @item.children.each do |i|
+                li
+                  = link_to i.title, i
+                  |  
 
     - if @item.item_images.count > 0
       .panel.panel-default
