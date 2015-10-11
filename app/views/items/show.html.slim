@@ -38,8 +38,7 @@
             ul
               - @item.children.each do |i|
                 li
-                  = link_to i.title, i
-                  = " (" + i.id + ")"
+                  = link_to i.title + " (" + i.id + ")", i
 
     - if @item.item_images.count > 0
       .panel.panel-default
