@@ -56,12 +56,6 @@ and adjust it to your needs (see the comments in the script).
 Please refer [the official Git book](https://www.git-scm.com/book/)
 for details on how to work with Git.
 
-## Roadmap
-
-- Search by tags
-- Generate QR code
-- Material design
-
 ## Credits
 
 - https://github.com/noroot
