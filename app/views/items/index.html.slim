@@ -19,7 +19,7 @@
                     td 
                       = link_to item.title, item
                       p style="color:gray"
-                        = item.description
+                        = item.parsed_description
 
                       span 
                         - if not item.serial.nil? and not item.serial.empty?
