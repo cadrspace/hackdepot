@@ -24,7 +24,6 @@ class Item
   accepts_nested_attributes_for :item_fields, :allow_desotry => true, :autosave => true, :reject_if => :all_blank
 
   validates_presence_of :title
-  validates_presence_of :description
   validates_presence_of :status
 
   belongs_to :user
