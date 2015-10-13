@@ -4,12 +4,13 @@ class Item
   include Mongoid::Timestamps
   include SimpleEnum::Mongoid
   include Mongoid::Ancestry
+  include MongoidMarkdown::Parser
   has_ancestry
   paginates_per 10
   tags_separator ','
 
   field :title, type: String
-  field :description, type: String
+  markdown :description
   field :serial, type: String
   as_enum :status, free: 1, used: 2, requested: 3
 
