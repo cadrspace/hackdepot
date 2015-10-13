@@ -5,9 +5,8 @@ class Item
   include SimpleEnum::Mongoid
   include Mongoid::Ancestry
   has_ancestry
-  paginates_per 10 
+  paginates_per 10
   tags_separator ','
-
 
   field :title, type: String
   field :description, type: String
@@ -20,7 +19,6 @@ class Item
   embeds_many :item_images, :cascade_callbacks => true
   accepts_nested_attributes_for :item_images, :allow_destroy => true
 
-
 #  has_many :item_fields, :autosave => true
   embeds_many :item_fields, :cascade_callbacks => true
   accepts_nested_attributes_for :item_fields, :allow_desotry => true, :autosave => true, :reject_if => :all_blank
@@ -31,14 +29,11 @@ class Item
 
   belongs_to :user
 
-
   #  scope :search, ->(query) { where("title LIKE ?", "#{query}%") }
-
 
   def self.search(query)
     where(title: /#{query}/)
   end
-    
 
   # has_many :children,
   #   class_name: 'Item',
