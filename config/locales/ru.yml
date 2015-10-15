@@ -1,15 +1,15 @@
 ru:
-  Description: Описание
-  home: Главная страница
-  Special fields: Специальные поля
-  Part of: Часть предмета
-  Contains: Содержит
-  Parent: Родительский элемент
-  Images: Изображения
-  Serial Number: Серийный номер
-  Status: Статус
   Back: Назад
+  Contains: Содержит
+  Description: Описание
+  Images: Изображения
+  Parent: Родительский элемент
+  Part of: Часть предмета
+  Serial Number: Серийный номер
   Show: Показать
+  Special fields: Специальные поля
+  Status: Статус
+  home: Главная страница
   about:
     header: О сервисе
     message: >-
