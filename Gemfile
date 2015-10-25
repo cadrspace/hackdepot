@@ -58,6 +58,7 @@ gem 'rmagick', :require => 'RMagick'
 
 gem 'mongoid_taggable'
 gem 'mongoid-ancestry'
+gem 'mongoid_markdown'
 
 # Application server
 gem 'unicorn-rails'

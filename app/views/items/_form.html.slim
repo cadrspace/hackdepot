@@ -7,7 +7,10 @@
     = f.hidden_field :parent_id
     .hd-form-parents-block  
     = f.input :title
-    = f.input :description
+    b
+      = t('Description')
+      | <br/>
+    = f.text_area :description, size: "100%"
     = f.input :status, as: :select, collection: enum_option_pairs(Item, :status)
     = f.input :tags 
     = f.input :serial

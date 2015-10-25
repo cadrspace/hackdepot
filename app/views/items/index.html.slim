@@ -18,8 +18,8 @@
                   tr
                     td 
                       = link_to item.title, item
-                      p style="color:gray"
-                        = item.description
+                      p style="color:gray; white-space: pre-wrap;"
+                        = truncate(item.description, :length => 256, :omission => '...')
 
                       div.g 
                         - if not item.serial.nil? and not item.serial.empty?
