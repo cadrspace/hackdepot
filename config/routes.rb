@@ -7,6 +7,13 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :api do
+    devise_for :users
+    namespace :v1 do
+      resources :items
+    end
+  end
+
 #  resources :places
 
   devise_for :users
