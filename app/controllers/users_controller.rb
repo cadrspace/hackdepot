@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
-  
+
   before_filter :authenticate_user!, :except => [:index]
   respond_to :html
-  
+
   def profile
     if params[:id]
       @profile = User.find(params[:id])
