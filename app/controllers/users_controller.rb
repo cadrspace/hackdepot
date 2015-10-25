@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   before_filter :authenticate_user!, :except => [:index]
-  respond_to :html
+  respond_to :html, :json
 
   def profile
     if params[:id]
