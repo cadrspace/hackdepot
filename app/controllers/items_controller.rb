@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
 
   before_filter :authenticate_user!, :except => [:index]
 
-  respond_to :html, :json
+  respond_to :html
 
   def index
     @tag = params[:tag]
