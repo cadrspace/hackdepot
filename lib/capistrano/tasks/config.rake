@@ -26,30 +26,11 @@ namespace :config do
 
     desc 'Compile and upload nginx configuration'
     task :nginx do
-      on roles(:app) do
+      on roles(:all) do
         upload_template 'nginx.conf.erb', "#{ shared_path }/#{fetch(:application)}-nginx.conf"
       end
     end
-
-  #   desc 'Compile and upload version config'
-  #   task :version do
-  #     on roles(:all) do
-  #       require_relative '../../../config/initializers/version.rb'
-  #       string = StringIO.new(LeaderUnited::Version.new.to_yaml)
-  #       upload! string, "#{release_path}/config/version.yml"
-  #     end
-  #   end
-  # end
-
-  namespace :download do
-    desc 'Download figaro configuration'
-    task :figaro do
-      on roles(:all) do
-        download! "#{shared_path}/config/application.yml", File.expand_path('../../../../config/application.yml', __FILE__)
-      end
-    end
   end
-
 
   desc 'Upload all configs'
   task :upload do

@@ -19,4 +19,12 @@ namespace :service do
     end
   end
   
+  %i(start stop restart status reload).each do |action|
+    desc "Run 'service #{fetch(:application)} #{action}' on remote host"
+    task action do
+      on roles(:all) do
+        execute "sudo /sbin/#{action} #{fetch(:application)}"
+      end
+    end
+  end
 end
