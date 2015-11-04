@@ -1,4 +1,4 @@
-namespace :service do
+namespace :service do  
   %i(start stop restart status reload).each do |action|
     desc "Run 'service #{fetch(:application)} #{action}' on remote host"
     task action do
@@ -18,4 +18,5 @@ namespace :service do
       end
     end
   end
+  
 end
