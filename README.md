@@ -43,7 +43,42 @@ that allows you to start the HackDepot service on the boot and manage
 it with the system tools.  Copy the script to `/etc/init.d/hackdepot`
 and adjust it to your needs (see the comments in the script).
 
+## Deployment and serving
+Deplpoyment routine made with `Capistrano` http://capistranorb.com
+
+- Deploy to `environment` server where environment is configured
+environment
+
+```
+$ cap [production] deploy
+```
+
+- Restart server
+
+```
+$ cap production service:restart
+```
+
+will restart rails application server
+
+Serving by default implemented with nginx, with custom capistrano tasks which is
+generating configuration for nginx to `shared` directory on remote
+server.
+
+- Generate nginx configuration by template
+
+```
+$ cap production config:upload
+```
+
+will upload all necessary configuration files to `shared`, from you
+can symlink it to whereever you need on you server.
+
+Nginx configuration symlinked to (on debian based)
+`/etc/nginx/sites-enabled/hackdepot.conf`
+
 ## Usage
+Empty
 
 ## Contributing
 
