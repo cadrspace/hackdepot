@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.9'
+gem 'rails' ,'~> 4.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -29,6 +29,7 @@ gem 'spring',        group: :development
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -63,6 +64,7 @@ gem 'mongoid_markdown'
 
 # Authentication and authorization
 gem 'devise'
+gem 'devise_token_auth', github: 'ybian/devise_token_auth', branch: 'mongoid'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-vkontakte'
@@ -84,4 +86,3 @@ gem 'kaminari'
 
 # geo
 gem 'gmaps4rails'
-
