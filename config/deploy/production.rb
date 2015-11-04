@@ -7,7 +7,12 @@
 # server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
 # server 'db.example.com', user: 'deploy', roles: %w{db}
 
+set :nginx_server_name, 'hd.cadr.nntc.nnov.ru'
+set :nginx_server_port, 80
+set :app_user, 'over'
+
 server 'cadrbox', user: 'over', roles: %{app db web}
+after "deploy:finished", "service:init:restart"
 
 # role-based syntax
 # ==================

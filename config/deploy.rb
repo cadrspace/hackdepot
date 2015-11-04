@@ -51,7 +51,7 @@ namespace :deploy do
     end
   end
 
-  # after :finishing, 'deploy:cleanup'
+  after :finishing, 'deploy:cleanup'
 end
 
 # after 'deploy:updated', 'config:upload:version'
