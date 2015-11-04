@@ -12,7 +12,7 @@ set :nginx_server_port, 80
 set :app_user, 'over'
 
 server 'cadrbox', user: 'over', roles: %{app db web}
-after "deploy:finished", "service:init:restart"
+after "deploy:finished", "service:service:restart"
 
 # role-based syntax
 # ==================
