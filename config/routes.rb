@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
 
   # FIXME:
-  # devise_for :users
+  devise_for :users
   # as :user do
   #   get 'users/new' => 'pages#about', :as => 'new_user_registration'
   #   get 'users/edit' => 'devise/registrations#edit', :as => 'edit_user_registration'
