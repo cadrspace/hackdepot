@@ -260,7 +260,7 @@ Devise.setup do |config|
   require 'devise/orm/mongoid'
 
   config.warden do |manager|
-    manager.failure_app = CustomAuthFailure
+    # manager.failure_app = CustomAuthFailure
     # manager.strategies.add(:password, Devise::Strategies::Password)
     # manager.default_strategies(:scope => :user).unshift :password
   end
