@@ -1,0 +1,25 @@
+#!upstart
+description "Upstart Script for a Leader United unicorn process"
+
+start on startup
+stop on shutdown
+
+respawn
+
+setuid <%= fetch(:app_user) %>
+setgid <%= fetch(:app_user) %>
+
+reload signal USR2
+
+chdir <%= "#{deploy_to}/current/" %>
+
+script
+  /home/<%= fetch(:app_user) %>/.rvm/wrappers/ruby-<%= fetch(:rvm_ruby_version) %>/bundle exec unicorn -c <%= fetch(:deploy_to) %>/current/config/unicorn/<%= fetch(:stage) %>.rb --env <%= fetch(:stage) %>
+  flock -x 0 < <%= fetch(:deploy_to) %>/current/tmp/pids/unicorn.pid
+end script
+
+pre-stop script
+exec /bin/bash <<EOT
+  exec kill -QUIT `cat <%= shared_path %>/tmp/pids/unicorn.pid`
+EOT
+end script

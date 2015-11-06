@@ -21,15 +21,15 @@
                       p style="color:gray; white-space: pre-wrap;"
                         = truncate(item.description, :length => 256, :omission => '...')
 
-                      span 
+                      div.g 
                         - if not item.serial.nil? and not item.serial.empty?
                           = t "Serial Number"
                           | : 
-                          span.label.label-info
+                          span.gray
                             = item.serial
-                        = t "Status"
-                        | : 
-                        span.label.label-info
+                      = t "Status"
+                      | : 
+                      span.label.label-info
                           = item.status
                       dl.dl-horizontal
                       - item.tags_array.each do |i|
