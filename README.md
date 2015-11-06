@@ -48,7 +48,7 @@ and adjust it to your needs (see the comments in the script).
 Deployment routine is made with [Capistrano](http://capistranorb.com).
 
 - Deploy to a server using a configured environment.  Eg. for
-deploying to a produciton server use `production` environment:
+deploying to a production server use `production` environment:
 
 ```
 $ cap production deploy
