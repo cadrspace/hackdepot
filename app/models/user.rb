@@ -4,7 +4,14 @@ class User
   # :confirmable, :lockable, :timeoutable and :omniauthable
   # :registerable
   devise :database_authenticatable, 
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable,
+         :omniauthable
+
+  include DeviseTokenAuth::Concerns::User
+
+  ## Required
+  field :provider, type: String #, null: false
+  field :uid, type: String, default: "" #, null: false,
 
   ## Database authenticatable
   field :email,              type: String, default: ""
@@ -25,10 +32,18 @@ class User
   field :last_sign_in_ip,    type: String
 
   ## Confirmable
-  # field :confirmation_token,   type: String
-  # field :confirmed_at,         type: Time
-  # field :confirmation_sent_at, type: Time
-  # field :unconfirmed_email,    type: String # Only if using reconfirmable
+  field :confirmation_token,   type: String
+  field :confirmed_at,         type: Time
+  field :confirmation_sent_at, type: Time
+  field :unconfirmed_email,    type: String # Only if using reconfirmable
+
+  ## User Info
+  field :name, type: String
+  field :nickname, type: String
+  field :image, type: String
+
+  ## Tokens
+  field :tokens, type: Hash, default: { }
 
   ## Lockable
   # field :failed_attempts, type: Integer, default: 0 # Only if lock strategy is :failed_attempts
