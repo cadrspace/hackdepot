@@ -44,7 +44,7 @@ it with the system tools.  Copy the script to `/etc/init.d/hackdepot`
 and adjust it to your needs (see the comments in the script).
 
 ## Deployment and serving
-Deplpoyment routine made with `Capistrano` http://capistranorb.com
+Deplpoyment routine made with [Capistrano](http://capistranorb.com).
 
 - Deploy to `environment` server where environment is configured
 environment
