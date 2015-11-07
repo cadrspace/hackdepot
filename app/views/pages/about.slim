@@ -4,10 +4,13 @@
       = t('about.header')
     dl.dl-horizontal
       p
-        == t('about.message', hackerspaces_link: link_to(t('about.message_hackerspaces'), 'http://hackerspaces.org/'))
+        == t('about.message',
+             hackerspaces_link: link_to(t('about.message_hackerspaces'),
+               'http://hackerspaces.org/'))
         ul
           li
-            = link_to(t('about.repository'), "https://github.com/cadrspace/hackdepot")
+            = link_to(t('about.repository'),
+                "https://github.com/cadrspace/hackdepot")
       p 
         b User registartion disabled, ask administrators for an account
 

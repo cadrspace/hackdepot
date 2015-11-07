@@ -19,7 +19,8 @@
                     td 
                       = link_to item.title, item
                       p style="color:gray; white-space: pre-wrap;"
-                        = truncate(item.description, :length => 256, :omission => '...')
+                        = truncate(item.description, :length => 256,
+                            :omission => '...')
 
                       div.g 
                         - if not item.serial.nil? and not item.serial.empty?
@@ -33,7 +34,8 @@
                           = item.status
                       dl.dl-horizontal
                       - item.tags_array.each do |i|
-                        = link_to i, "/items/tag/" + i, :class => "label label-success"
+                        = link_to i, "/items/tag/" + i,
+                            :class => "label label-success"
                       dl.dl-horizontal
                       div
                         i
@@ -46,7 +48,8 @@
                       br 
                       = link_to t('edit'), edit_item_path(item) 
                       br
-                        = link_to t('destroy'), item, method: :delete, data: { confirm: t('items.confirm') }
+                        = link_to t('destroy'), item, method: :delete,
+                            data: { confirm: t('items.confirm') }
       = paginate @items
 
 - else
@@ -54,5 +57,7 @@
     h1
       = t "items.listing"
       p
-        == t('items.sign_in_message', sign_in_link: link_to(t('sign_in'),  new_user_session_path), sign_up_link: link_to(t('sign_up'), new_user_registration_path))
+        == t('items.sign_in_message',
+             sign_in_link: link_to(t('sign_in'), new_user_session_path),
+             sign_up_link: link_to(t('sign_up'), new_user_registration_path))
         
