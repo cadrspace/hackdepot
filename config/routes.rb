@@ -9,11 +9,11 @@ Rails.application.routes.draw do
 
   # FIXME:
   devise_for :users
-  # as :user do
-  #   get 'users/new' => 'pages#about', :as => 'new_user_registration'
-  #   get 'users/edit' => 'devise/registrations#edit', :as => 'edit_user_registration'
-  #   put 'users' => 'devise/registrations#update', :as => 'user_registration'
-  # end
+  as :user do
+    get 'users/new' => 'pages#about', :as => 'new_user_registration'
+    get 'users/edit' => 'devise/registrations#edit', :as => 'edit_user_registration'
+    put 'users' => 'devise/registrations#update', :as => 'user_registration'
+  end
 
   namespace :api, :defaults => { :format => 'json' } do
     namespace :v1 do
