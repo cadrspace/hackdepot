@@ -9,14 +9,17 @@
           = @item.created_at
         - if @item.user
           | &nbsp;by&nbsp;
-          = link_to @item.user.email, profile_path(@item.user), class: 'hd-panel-head-link'
+          = link_to @item.user.email, profile_path(@item.user),
+              class: 'hd-panel-head-link'
         - if @item.parent
           |  &rarr; 
           = t 'Part of'
           |  
-          = link_to @item.parent.title + ' ' + "(#{@item.parent.id})", @item.parent, class: 'hd-panel-head-link'
+          = link_to @item.parent.title + ' ' + "(#{@item.parent.id})",
+              @item.parent, class: 'hd-panel-head-link'
 
-        = link_to t('edit'), edit_item_path(@item), :class => "btn btn-success btn-xs pull-right"
+        = link_to t('edit'), edit_item_path(@item),
+            :class => "btn btn-success btn-xs pull-right"
         
       .panel-body
         = @item.parsed_description
