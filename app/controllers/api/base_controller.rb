@@ -1,6 +1,9 @@
 include ActionController::MimeResponds
 include ActionController::StrongParameters
 
-class ApplicationController < ActionController::Base
-  include DeviseTokenAuth::Concerns::SetUserByToken
+module Api
+  class ApplicationController < ActionController::Base
+    include DeviseTokenAuth::Concerns::SetUserByToken
+    protect_from_forgery with: :null_session
+  end
 end
