@@ -9,6 +9,8 @@
     = f.input :title
     b
       = t('Description')
+    i
+      |  (Markdown enabled)
       | <br/>
     = f.text_area :description, size: "100%"
     = f.input :status, as: :select, collection: enum_option_pairs(Item, :status)
