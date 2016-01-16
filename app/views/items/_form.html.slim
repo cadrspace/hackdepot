@@ -27,6 +27,8 @@
         .panel-body
           - @item.item_images.each do |i|
             = image_tag i.image.url(:thumb)
+            div id="remove_image" name="remove_image"
+              | X
  
 
     .panel.panel-primary

@@ -28,3 +28,5 @@ $(document).on 'keydown', '#parent_title_id', (event) ->
     item = new Item
     item.search $(target).val(), drawParents
 
+$('remove_image').on 'click' (event) ->
+        alert "hello world!"	     
