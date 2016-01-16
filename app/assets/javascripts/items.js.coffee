@@ -29,4 +29,5 @@ $(document).on 'keydown', '#parent_title_id', (event) ->
     item.search $(target).val(), drawParents
 
 $(document).on 'click', '#remove_image', (event) ->
-        alert "hello world!"
+        console.log(event)
+        return false
