@@ -72,7 +72,9 @@ class ItemsController < ApplicationController
   end
 
   def remove_image
-    puts @item.item_images
+    respond_to do |format|
+      format.json { render :json => @items }
+    end
   end
 
   def images_flush
