@@ -7,6 +7,9 @@ class Item
   search: (query, cb) ->
     $.get "/items/search.json", {query: query} , (data) ->
       cb(data)
+  remove_image: (id) ->
+    $.get "/items/remove_image.json", {id: id}, (data) ->
+        console.log(data)
 
 cls = ".hd-form-parents-block"
 
@@ -30,4 +33,6 @@ $(document).on 'keydown', '#parent_title_id', (event) ->
 
 $(document).on 'click', '#remove_image', (event) ->
         console.log(event)
+        item = new Item
+        item.remove_image "test"
         return false

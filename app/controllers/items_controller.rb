@@ -71,6 +71,10 @@ class ItemsController < ApplicationController
     respond_with(@item)
   end
 
+  def remove_image
+    puts @item.item_images
+  end
+
   def images_flush
     @item.item_images.destroy_all
   end
