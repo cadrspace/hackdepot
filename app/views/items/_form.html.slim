@@ -27,7 +27,6 @@
         .panel-body
           - @item.item_images.each do |i|
             = image_tag i.image.url(:thumb)
-            br
             button id="remove_image"
               | X
  
