@@ -72,8 +72,10 @@ class ItemsController < ApplicationController
   end
 
   def remove_image
+    item = Item.find(params[:id])
+    attachment_delete! item, params[:image_id]
     respond_to do |format|
-      format.json { render :json => @items }
+      format.json { head :ok }
     end
   end
 
@@ -82,6 +84,16 @@ class ItemsController < ApplicationController
   end
 
   private
+
+  # Delete an attachment with ID from an ITEM.  Return value is
+  # undefined.
+  def attachment_delete!(item, id)
+    bson_id = BSON::ObjectId(id)
+    attachments = item.item_images.select {|i| i.id == bson_id}
+    attachments[0].destroy
+    item.save!
+  end
+
   def set_item
     @item = Item.find(params[:id])
   end
