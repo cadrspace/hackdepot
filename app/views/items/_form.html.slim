@@ -26,9 +26,10 @@
           = t "Images"
         .panel-body
           - @item.item_images.each do |i|
-            = image_tag i.image.url(:thumb)
-            button id="remove_image"
-              | X
+            div
+              = image_tag i.image.url(:thumb)
+              button id="remove_image"
+                | X
  
 
     .panel.panel-primary
