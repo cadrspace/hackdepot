@@ -9,7 +9,7 @@ class Item
       cb(data)
   remove_image: (id, image_id) ->
     $.get "/items/remove_image.json", {id: id, image_id: image_id}, (data) ->
-        console.log(data)
+        return false
 
 cls = ".hd-form-parents-block"
 
@@ -33,8 +33,6 @@ $(document).on 'keydown', '#parent_title_id', (event) ->
 
 $(document).on 'click', '#remove_image', (event) ->
         event.preventDefault()
-
-        console.log(event)
 
         item_id  = event.currentTarget.attributes.item_id.value
         image_id = event.currentTarget.attributes.image_id.value
