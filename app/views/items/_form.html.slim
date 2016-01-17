@@ -28,7 +28,7 @@
           - @item.item_images.each do |i|
             div
               = image_tag i.image.url(:thumb)
-              button id="remove_image"
+              button id="remove_image" item_id=@item.id image_id=i.id
                 | X
  
 
