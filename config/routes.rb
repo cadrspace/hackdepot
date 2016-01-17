@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     collection do 
       get '/tag/:tag' => "items#index"
       get '/search' => "items#search"
+      get '/remove_image' => "items#remove_image"
     end
   end
 
