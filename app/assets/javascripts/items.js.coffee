@@ -7,8 +7,8 @@ class Item
   search: (query, cb) ->
     $.get "/items/search.json", {query: query} , (data) ->
       cb(data)
-  remove_image: (id) ->
-    $.get "/items/remove_image.json", {id: id}, (data) ->
+  remove_image: (id, image_id) ->
+    $.get "/items/remove_image.json", {id: id, image_id: image_id}, (data) ->
         console.log(data)
 
 cls = ".hd-form-parents-block"
@@ -32,7 +32,13 @@ $(document).on 'keydown', '#parent_title_id', (event) ->
     item.search $(target).val(), drawParents
 
 $(document).on 'click', '#remove_image', (event) ->
+        event.preventDefault()
+
         console.log(event)
+
+        item_id  = event.currentTarget.attributes.item_id.value
+        image_id = event.currentTarget.attributes.image_id.value
+
         item = new Item
-        item.remove_image "test"
-        return false
+        item.remove_image item_id, image_id
+
