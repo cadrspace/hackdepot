@@ -58,5 +58,29 @@
      
     .panel.panel-default
       .panel-body
-        == @qr.as_html
+        table
+          tr
+            td
+              == image_tag @qr.as_png(size: 240).to_data_url
+            td style="vertical-align: top; padding-top: 20px"
+              table style="font-size: 200%"
+                tr
+                  td colspan="2" style="font-size: 200%"
+                    | CADR
+                tr
+                  td
+                    | ID:
+                  td
+                    = @item.id
+                tr
+                  td
+                    | Title:
+                  td
+                    = @item.title
+                tr
+                  td
+                    | S/N:
+                  td
+                    = @item.serial
+
 
