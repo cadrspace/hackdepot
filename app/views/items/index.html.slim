@@ -6,51 +6,80 @@
       = t "items.add"
     h1
       = t "items.listing"
-    .table-responsive
-      table.table.table-bordered.table-hover
-        thead
-          tr
-            th
-              = t('items.table.header')
-            th style="width:100px"
-              tbody
-                - @items.each do | item |
-                  tr
-                    td 
-                      = link_to item.title, item
-                      p style="color:gray; white-space: pre-wrap;"
-                        = truncate(item.description, :length => 256,
-                            :omission => '...')
 
-                      div.g 
-                        - if not item.serial.nil? and not item.serial.empty?
-                          = t "Serial Number"
-                          | : 
-                          span.gray
-                            = item.serial
-                      = t "Status"
-                      | : 
-                      span.label.label-info
-                          = item.status
-                      dl.dl-horizontal
-                      - item.tags_array.each do |i|
-                        = link_to i, "/items/tag/" + i,
-                            :class => "label label-success"
-                      dl.dl-horizontal
-                      div
-                        i
-                          = item.created_at
-                        - if item.user
-                          |  by&nbsp;
-                          = link_to item.user.email, profile_path(item.user)
-                    td
-                      = link_to t('details'), item
-                      br 
-                      = link_to t('edit'), edit_item_path(item) 
-                      br
-                        = link_to t('destroy'), item, method: :delete,
-                            data: { confirm: t('items.confirm') }
-      = paginate @items
+    .row.hd-block
+      .col-md-12
+        form.form-inline
+          .form-group
+            input.form-control name="query" value="#{params[:query]}"
+            | &nbsp;
+            button.btn.btn-primary
+              = t "search"
+
+    form method="post" action="/items/action"
+      .row.hd-block      
+        .col-md-12
+          .table-responsive
+            table.table.table-bordered.table-hover
+              thead
+                tr
+                  th
+                    = t('items.table.header')
+                  th style="width:100px"
+                    tbody
+                      - @items.each do | item |
+                        tr
+                          td 
+                            input type="checkbox" name="items[#{item.id}]"
+                            | &nbsp;
+                            = link_to item.title, item
+                            p style="color:gray; white-space: pre-wrap;"
+                              = truncate(item.description, :length => 256,
+                                  :omission => '...')
+
+                            div.g 
+                              - if not item.serial.nil? and not item.serial.empty?
+                                = t "Serial Number"
+                                | : 
+                                span.gray
+                                  = item.serial
+                            = t "Status"
+                            | : 
+                            span.label.label-info
+                                = item.status
+                            dl.dl-horizontal
+                            - item.tags_array.each do |i|
+                              = link_to i, "/items/tag/" + i,
+                                  :class => "label label-success"
+                            dl.dl-horizontal
+                            div
+                              i
+                                = item.created_at
+                              - if item.user
+                                |  by&nbsp;
+                                = link_to item.user.email, profile_path(item.user)
+                          td
+                            = link_to t('details'), item
+                            br 
+                            = link_to t('edit'), edit_item_path(item) 
+                            br
+                              = link_to t('destroy'), item, method: :delete,
+                                  data: { confirm: t('items.confirm') }
+
+      .row
+        .col-md-3
+          .form-group
+            label for="action"
+              = t "items.actions_with_selected"
+              | &nbsp;
+            select.form-control name="dowhat"
+              option value="print"
+                = t "items.print"
+          button.btn.btn-primary type="submit" 
+            = t "Apply"
+      .row
+        .col-md-12
+          = paginate @items
 
 - else
   .page-header

@@ -1,0 +1,46 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=edge"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    title
+      | HackDepot print layout
+    = stylesheet_link_tag 'application', media: 'all',
+        'data-turbolinks-track' => true
+    = javascript_include_tag 'application',
+        'data-turbolinks-track' => true
+    = csrf_meta_tags
+
+  body
+    .row
+      .col-md-12
+        - @items.each do |item|
+          .panel.panel-default
+            .panel-body
+              table
+                tr
+                  td
+                    == image_tag RQRCode::QRCode.new( item.id.to_s, :size => 3, :level => :h ).as_png(size: 240).to_data_url
+                  td style="vertical-align: top; padding-top: 20px"
+                    table style="font-size: 200%"
+                      tr
+                        td colspan="2" style="font-size: 200%"
+                          | CADR
+                      tr
+                        td
+                          | ID:
+                        td
+                          = item.id
+                      tr
+                        td
+                          | Title:
+                        td
+                          = item.title
+                      tr
+                        td
+                          | S/N:
+                        td
+                          = item.serial
+
+

@@ -42,3 +42,8 @@ table {
     color: white;
     text-decoration: underline
 }
+
+.hd-block {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
