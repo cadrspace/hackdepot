@@ -10,6 +10,8 @@ ru:
   Special fields: Специальные поля
   Status: Статус
   home: Главная страница
+  search: Поиск
+  Apply: Применить
   about:
     header: О сервисе
     message: >-
@@ -80,6 +82,8 @@ ru:
     add: Добавить
     confirm: Вы уверены ?
     new: Добавить новый
+    actions_with_selected: Действия с выбранными
+    print: Распечатать
     sign_in_message: >
       Вы не вошли в систему.  %{sign_in_link} или %{sign_up_link},
       чтобы посмотреть список вещей.

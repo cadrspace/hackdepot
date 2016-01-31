@@ -1,6 +1,6 @@
 development:
   # Configure available database sessions. (required)
-  sessions:
+  clients:
     # Defines the default session. (required)
     default:
       # Defines the name of the default database that Mongoid can connect to.
@@ -9,7 +9,8 @@ development:
       # Provides the hosts the default session can connect to. Must be an array
       # of host:port pairs. (required)
       hosts:
-        - 192.168.0.29:27017
+        - 127.0.0.1:27017
+#        - 192.168.0.95:27017
 #        - 172.20.10.4:27017
       options:
         # Change the default write concern. (default = { w: 1 })

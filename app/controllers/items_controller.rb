@@ -1,28 +1,26 @@
 require 'rqrcode'
 
 class ItemsController < ApplicationController
+  
   before_action :set_item, only: [:show, :edit, :update, :destroy]
-
   before_filter :authenticate_user!, :except => [:index]
-
   respond_to :html
 
   def index
     @tag = params[:tag]
     @items = Item.order_by(:id => 'desc').page params[:page]
     @items = Item.tagged_with(@tag).page params[:page] if !@tag.nil?
+    @items = Item.search(params[:query]).page params[:page] if !params[:query].nil?
     respond_with(@items)
   end
 
-
-  def search
-    @items = Item.search(params[:query])
-    puts @items
-    respond_to do |format|
-      format.json { render :json => @items }
+  def action
+    print params
+    @items = Item.find(params[:items].keys)
+    if (params[:dowhat] == 'print')
+      render 'items/print.html.slim', :layout => false
     end
   end
-
 
   def show
     @qr = RQRCode::QRCode.new( @item.id.to_s, :size => 3, :level => :h )
