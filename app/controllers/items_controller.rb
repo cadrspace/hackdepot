@@ -14,6 +14,14 @@ class ItemsController < ApplicationController
     respond_with(@items)
   end
 
+  def search
+    @items = Item.search(params[:query])
+    puts @items
+    respond_to do |format|
+      format.json { render :json => @items }
+    end
+  end
+
   def action
     print params
     @items = Item.find(params[:items].keys)
