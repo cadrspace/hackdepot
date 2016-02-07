@@ -47,11 +47,6 @@
           span.label.label-info
             = @item.status
 
-        dl.dl-horizontal        
-        p
-          - @item.tags_array.each do |i|
-            = link_to i, "/items/tag/" + i, :class => "label label-success"
-
         - if @item.children.count > 0
           = t 'Contains'
           | :
@@ -60,6 +55,11 @@
               - @item.children.each do |i|
                 li
                   = link_to i.title + " (" + i.id + ")", i
+
+        dl.dl-horizontal
+        p
+          - @item.tags_array.each do |i|
+            = link_to i, "/items/tag/" + i, :class => "label label-success"
 
     - if @item.item_images.count > 0
       .panel.panel-default
