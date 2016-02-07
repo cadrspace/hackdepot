@@ -41,14 +41,14 @@
               td
                 = f.value
 
-        span 
+        p
           = t "Status"
           | : 
           span.label.label-info
             = @item.status
 
-        p
-          - if @item.children.count > 0
+        - if @item.children.count > 0
+          p
             = t 'Contains'
             | :
               p
