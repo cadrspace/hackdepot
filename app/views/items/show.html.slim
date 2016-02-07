@@ -51,11 +51,11 @@
           p
             = t 'Contains'
             | :
-              p
-                ul
-                  - @item.children.each do |i|
-                    li
-                      = link_to i.title + " (" + i.id + ")", i
+            p
+              ul
+                - @item.children.each do |i|
+                  li
+                    = link_to i.title + " (" + i.id + ")", i
 
         dl.dl-horizontal
         p
