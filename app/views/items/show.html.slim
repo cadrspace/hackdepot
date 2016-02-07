@@ -32,16 +32,6 @@
               = @item.serial
 
         p
-          table
-          - @item.item_fields.each do |f|
-            tr
-              td
-                = f.name
-                | : 
-              td
-                = f.value
-
-        p
           = t "Status"
           | : 
           span.label.label-info
@@ -52,6 +42,20 @@
           - @item.tags_array.each do |i|
             = link_to i, "/items/tag/" + i, :class => "label label-success"
             |  
+
+    - if @item.item_fields.count > 0
+      .panel.panel-default
+        .panel-heading
+          = "Additional fields"
+        .panel-body
+          table
+            - @item.item_fields.each do |f|
+              tr
+                td
+                  = f.name
+                  | : 
+                td
+                  = f.value
 
     - if @item.children.count > 0
       .panel.panel-default
