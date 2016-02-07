@@ -7,8 +7,9 @@
         | &nbsp;
         i
           | (
-          = @item.created_at
           = t "Added"
+          |  
+          = @item.created_at
           |  
           - if @item.user
             | &nbsp;by&nbsp;
