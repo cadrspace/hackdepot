@@ -61,6 +61,7 @@
         p
           - @item.tags_array.each do |i|
             = link_to i, "/items/tag/" + i, :class => "label label-success"
+            |  
 
     - if @item.item_images.count > 0
       .panel.panel-default
