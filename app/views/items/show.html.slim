@@ -6,11 +6,15 @@
         = @item.title
         | &nbsp;
         i
+          | (
           = @item.created_at
-        - if @item.user
-          | &nbsp;by&nbsp;
-          = link_to @item.user.email, profile_path(@item.user),
-              class: 'hd-panel-head-link'
+          = t "Added"
+          |  
+          - if @item.user
+            | &nbsp;by&nbsp;
+            = link_to @item.user.email, profile_path(@item.user),
+                class: 'hd-panel-head-link'
+          | ) 
         - if @item.parent
           |  &rarr; 
           = t 'Part of'
