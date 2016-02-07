@@ -21,7 +21,9 @@ html
               table
                 tr
                   td
-                    == image_tag RQRCode::QRCode.new( item.id.to_s, :size => 3, :level => :h ).as_png(size: 240).to_data_url
+                    == image_tag RQRCode::QRCode.new( item.id.to_s, \
+                           :size => 3, :level => :h \
+                         ).as_png(size: 240).to_data_url
                   td style="vertical-align: top; padding-top: 20px"
                     table style="font-size: 200%"
                       tr
