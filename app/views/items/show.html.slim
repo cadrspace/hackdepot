@@ -30,6 +30,17 @@
             | : 
             span.gray
               = @item.serial
+
+        p
+          table
+          - @item.item_fields.each do |f|
+            tr
+              td
+                = f.name
+                | : 
+              td
+                = f.value
+
         span 
           = t "Status"
           | : 
