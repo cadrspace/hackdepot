@@ -54,6 +54,7 @@
 
         - if @item.children.count > 0
           = t 'Contains'
+          | :
           p
             ul
               - @item.children.each do |i|
