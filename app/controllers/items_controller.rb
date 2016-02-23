@@ -24,7 +24,7 @@ class ItemsController < ApplicationController
 
   def action
     print params
-    @items = Item.find(params[:items].keys)
+    @items = params[:items] ? Item.find(params[:items].keys) : []
     if (params[:dowhat] == 'print')
       render 'items/print.html.slim', :layout => false
     end
