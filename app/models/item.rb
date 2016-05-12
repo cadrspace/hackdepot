@@ -27,6 +27,8 @@ class Item
   belongs_to :user
 
   def self.search(query)
-    where(title: /#{query}/)
+    where("$or" => [ { title:  /#{query}/ },
+                     { id:     /#{query}/ },
+                     { serial: /#{query}/ } ])
   end
 end
