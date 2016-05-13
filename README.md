@@ -12,14 +12,14 @@ basic needs of [our own hackerspace](http://cadrspace.ru/).
 
 ## Requirements
 
-- Ruby >= 2.2.2
-- MongoDB >= 3.x
+- [Ruby](https://www.ruby-lang.org/) 2.2.2 or later
+- [MongoDB](https://www.mongodb.com/) 3.x
 
 ## Installation
 
-- Install [rvm](http://rvm.io)
+- Install [rvm](https://rvm.io)
 - Install ruby through RVM
-- Go to the project root
+- Go to the project root directory.
 - Change database credentials in **config/mongoid.yml**
 - Install the needed gems:
 ```
@@ -31,8 +31,7 @@ $ rake db:setup
 ```
 - Start the production server:
 ```
-$ export RAILS_ENV=production
-$ rails server
+$ RAILS_ENV=production rails server
 ```
 
 Alternatively you can use `hackdepot` script that starts the
@@ -94,9 +93,12 @@ for details on how to work with Git.
 
 ## Credits
 
-- https://github.com/noroot
-- https://github.com/cadrspace
+- [Noroot](https://github.com/noroot)
+- [CADR Hackerspace](https://github.com/cadrspace)
 
 ## License
 
-GNU GPLv2
+HackDepot is free software; it is distributed under terms of GNU
+General Public License as published by the Free Software Foundation,
+version 2 of the License.  See `LICENSE` file for the full text of the
+license.
