@@ -10,6 +10,10 @@ Though HackDepot has no stable release yet, we're hoping to make the
 first release as soon as it gets to the point where it fulfills the
 basic needs of [our own hackerspace](http://cadrspace.ru/).
 
+## Clients
+
+- [hd](https://github.com/cadrspace/hd)
+
 ## Requirements
 
 - [Ruby](https://www.ruby-lang.org/) 2.2.2 or later
@@ -76,9 +80,6 @@ you can symlink it to whereever you need on your server.
 
 On the Debian GNU/Linux based distributions the Nginx configuration is
 symlinked to `/etc/nginx/sites-enabled/hackdepot.conf`.
-
-## Usage
-Empty
 
 ## Contributing
 
