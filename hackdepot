@@ -4,9 +4,8 @@
 
 IFS=$' '
 RAILS=rails
-RAILS_OPT=(--environment=production --daemon)
 
-bash -l -c "$RAILS server ${RAILS_OPT[*]} $@"
+bash -l -c "RAILS_ENV=production $RAILS server --daemon $@"
 
 exit $?
 
