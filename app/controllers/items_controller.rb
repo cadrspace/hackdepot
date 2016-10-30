@@ -1,7 +1,6 @@
 require 'rqrcode'
 
 class ItemsController < ApplicationController
-  
   before_action :set_item, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!, :except => [:index]
   respond_to :html

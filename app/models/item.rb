@@ -5,7 +5,7 @@ class Item
   include SimpleEnum::Mongoid
   include Mongoid::Ancestry
   include MongoidMarkdown::Parser
-  
+
   has_ancestry
   paginates_per 10
   tags_separator ','

@@ -3,7 +3,7 @@ class Place
   include SimpleEnum::Mongoid
 
   before_save :location_to_array
-  
+
   field :title, type: String
   field :description, type: String
   field :status, type: String
@@ -18,7 +18,7 @@ class Place
   def location_to_array
     self.location = self.location.to_a
   end
-  
+
   def unpack_location
     self.location
   end

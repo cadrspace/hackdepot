@@ -26,7 +26,6 @@ class PlacesController < ApplicationController
 
   def create
     data = place_params
-    #data[:location] = data[:location].split(",")
     @place = Place.new(data)
     @place.save
     respond_with(@place)
@@ -34,7 +33,6 @@ class PlacesController < ApplicationController
 
   def update
     data = place_params
-    #data[:location] = data[:location].split(",")
     @place.update(data)
     respond_with(@place)
   end
