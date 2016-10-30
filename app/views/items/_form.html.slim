@@ -10,8 +10,9 @@
     b
       = t('Description')
     i
-      |  (Markdown enabled)
-      | <br/>
+      |  (
+      = link_to("Markdown", "http://daringfireball.net/projects/markdown")
+      |  enabled) <br/>
     = f.text_area :description, size: "100%"
     = f.input :status, as: :select, collection: enum_option_pairs(Item, :status)
     = f.input :tags 
