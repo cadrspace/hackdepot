@@ -30,8 +30,7 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @qr = RQRCode::QRCode.new( @item.id.to_s, :size => 3, :level => :h )
-    respond_with(@item, @qr)
+    respond_with(@item, make_qr_code)
   end
 
   def new
@@ -89,6 +88,10 @@ class ItemsController < ApplicationController
   end
 
   private
+
+  def make_qr_code
+    return RQRCode::QRCode.new(@item.id.to_s, :size => 3, :level => :h)
+  end
 
   # Get the items list.
   def get_items(tag, page, query)
