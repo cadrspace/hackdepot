@@ -30,7 +30,8 @@ class ItemsController < ApplicationController
   end
 
   def show
-    respond_with(@item, make_qr_code)
+    @qr = make_qr_code
+    respond_with(@item, @qr)
   end
 
   def new
