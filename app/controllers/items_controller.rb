@@ -7,11 +7,10 @@ class ItemsController < ApplicationController
   respond_to :html
 
   def index
-    @tag = params[:tag]
-    @items = Item.order_by(:id => 'desc').page params[:page]
-    @items = Item.tagged_with(@tag).page params[:page] if !@tag.nil?
-    @items = Item.search(params[:query]).page params[:page] if !params[:query].nil?
-    respond_with(@items)
+    @tag   = params[:tag]
+    @page  = params[:page]
+    @query = params[:query]
+    respond_with(get_items(@tag, @page, @query))
   end
 
   def search
@@ -90,6 +89,14 @@ class ItemsController < ApplicationController
   end
 
   private
+
+  # Get the items list.
+  def get_items(tag, page, query)
+    @items = Item.order_by(:id => 'desc').page page
+    @items = Item.tagged_with(tag).page page if !tag.nil?
+    @items = Item.search(query).page page if !query.nil?
+    return @items
+  end
 
   # Delete an attachment with ID from an ITEM.  Return value is
   # undefined.
