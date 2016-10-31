@@ -48,7 +48,7 @@ html
 
             - if user_signed_in?
               li class="#{'active' if current_page? profile_path}"
-                = link_to "Вы вошли как #{current_user.email}", profile_path
+                = link_to "Вы вошли как #{current_user.nickname}", profile_path
               li 
                 = link_to t('sign_out'), destroy_user_session_path,
                     :method => :delete
